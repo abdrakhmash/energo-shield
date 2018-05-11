@@ -1,0 +1,27 @@
+{
+  "name": "energo-shield",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-csscomb": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdrakhmash/energo-shield.git"
+  },
+  "author": "abdrakhmash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdrakhmash/energo-shield/issues"
+  },
+  "homepage": "https://github.com/abdrakhmash/energo-shield#readme"
+}

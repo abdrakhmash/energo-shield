@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Энерго-Щит</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.default.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    </head>
+    
+    <body>
+        
+        <section class="about-us">
+            <div class="about-us__photo"></div>
+            <div class="about-us__info">
+                <h2 class="about-us__headline">О нас</h2>
+                <p>Энерго-щит занимается поставками электрического оборудования по наиболее привлекательным ценам. Мы напрямую взаимодействуем с производителями для обеспечения лучших условий для наших клиентов. Наша компания поможет вам с поиском оптимального решения под ваши задачи: подбор оборудования, доставка, проведение монтажных работ при необходимости. Все оборудование имеет необходимые сертификаты.</p>
+                
+                <div class="order-btn__wrapper">
+                    <div class="order-btn order-btn--opening">Заказать</div>  
+                </div>
+            </div>
+        </section>
+        
+        <section class="our-prices">
+            <h2>Наши цены</h2>
+            <form id="order" name="order" method="post" enctype="multipart/form-data">
+                <div class="checkbox prices"> <!--Часть формы, которая показывается как собственно чекбокс в "Наших ценах"-->
+                    <label class="checkbox-option checkbox-option--1">
+                        <input class="checkbox-native" type="checkbox" name="electro">
+                        <span class="checkbox-styled"></span>
+                        <span class="label">ГРЩУ</span>
+                        <span class="price-value">9999 руб.</span>
+                    </label>
+                    <label class="checkbox-option checkbox-option--2">
+                        <input class="checkbox-native" type="checkbox" name="electro">
+                        <span class="checkbox-styled"></span>
+                        <span class="label">ВРУ</span>
+                        <span class="price-value">9999 руб.</span>
+                    </label>
+                    <label class="checkbox-option checkbox-option--3">
+                        <input class="checkbox-native" type="checkbox" name="electro">
+                        <span class="checkbox-styled"></span>
+                        <span class="label">ЩО</span>
+                        <span class="price-value">9999 руб.</span>
+                    </label>
+                    <label class="checkbox-option checkbox-option--4">
+                        <input class="checkbox-native" type="checkbox" name="electro">
+                        <span class="checkbox-styled"></span>
+                        <span class="label">ЩС</span>
+                        <span class="price-value">9999 руб.</span>
+                    </label>  
+                    </div>
+                
+            <div class="order"> <!--Часть формы, которая показывается как модальное окно, вызывающееся по клику на кнопки "Оформить заказ" или "Заказать"-->
+            
+                <div class="order__form">
+
+                    <div class="order__close-btn"></div>
+
+                    <fieldset class="contact">
+                        <h3>Введите контактные данные</h3>
+                        <label class="contact__data contact__data--name">
+                            <span class="input-required">Имя</span>
+                            <input type="text" name="client-name" required autofocus placeholder="Иван Иванович">
+                        </label>
+                        <label class="contact__data">
+                            <span class="input-required">Телефон</span>
+                            <input type="tel" name="client-phone" required placeholder="Контактный телефон для уточнения деталей">
+                        </label>
+                        <label class="contact__data">
+                            <span class="input-required">E-mail</span>
+                            <input type="email" name="client-email" required placeholder="s-kak-dollar@mymail.ru">
+                        </label>
+                    </fieldset> 
+
+                    <fieldset class="order__details">
+                        <h3>Есть проект или решение?</h3>
+                        <p>Прикрепите ваше техзадание, описание проекта в форматах .pdf, .doc, .xls или cкачайте и заполните наш опросный лист</p>
+                        <div class="order__btns-container">
+                            <a class="download-btn" href="files/request_list.doc" download><p>Скачать <br> опросный лист</p></a>
+                            <label class="upload">
+                                <span class="upload__btn">Прикрепить файл
+                                    <input type="file" name="client-order-descript" id="upload" onchange="getName(this.value);">
+                                    <span class="upload__formlabel" id="fileformlabel"> </span>
+                                </span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="order__comments">
+                        <h3>Есть вопросы?</h3>
+                        <textarea name="client-coments" placeholder="Добавьте комментарии к заявке или задайте нам вопрос..." rows="5"></textarea>                
+                    </fieldset>
+
+                    <input class="order-btn order__submit-btn" type="submit" name="order__submit" value="Оформить заявку">
+
+                </div>
+            </div>
+                    
+            </form>
+            <div class="order-btn__wrapper">
+                    <div class="order-btn order-btn--disabled" id="aftercheckbox-btn">Оформить заказ</div>  
+                </div>
+        </section>
+        
+        <section class="released-projects">
+            <h2>Наши работы</h2>
+            <div class="released-projects__gallery">
+                <div class="released-projects__photo released-projects__photo--1">
+                    <img src="img/project1.jpg" alt="">
+                    <div class="released-projects__photo-subtitle"><p>Тестовая подпись</p></div>
+                </div>
+                <div class="released-projects__photo released-projects__photo--2">
+                    <img src="img/project2.jpg" alt="">
+                    <div class="released-projects__photo-subtitle"><p>Тестовая подпись</p></div>
+                </div>
+                <div class="released-projects__photo released-projects__photo--3">
+                    <img src=img/project3.jpg alt="">
+                    <div class="released-projects__photo-subtitle"><p>Тестовая подпись</p></div>
+                </div>
+                <div class="released-projects__photo released-projects__photo--4">
+                    <img src=img/project4.jpg alt="">
+                    <div class="released-projects__photo-subtitle"><p>Тестовая подпись</p></div>
+                </div>
+                <div class="released-projects__photo released-projects__photo--5">
+                    <img src=img/project5.jpg alt="">
+                    <div class="released-projects__photo-subtitle"><p>Тестовая подпись</p></div>
+                </div>
+                <div class="released-projects__photo released-projects__photo--6">
+                    <img src=img/project6.jpg alt="">
+                    <div class="released-projects__photo-subtitle"><p>Тестовая подпись</p></div>
+                </div>    
+            </div>
+            <div class="order-btn__wrapper">
+                    <div class="order-btn order-btn--opening">Заказать</div>       
+            </div>
+            
+        </section>
+        
+        <section class="our-process">
+            <div class="center">
+                <h2>Процесс</h2>
+                <div class="our-process__step-wrapper">
+                    <div class="our-process__step">
+                        <div class="our-process__step-name our-process__step-name--plan"><h3>План</h3></div>
+                        <div class="our-process__step-descript">
+                            <ul>
+                                <li>Опрос</li>
+                                <li>Смета</li>
+                            </ul>
+                        </div>                    
+                    </div>
+                    <div class="our-process__step our-process__step--install">
+                        <div class="our-process__step-name our-process__step-name--install"><h3>Сбор</h3></div>
+                        <div class="our-process__step-descript">
+                            <ul>
+                                <li>С любовью и нежностью собираем каждый щит.</li>
+                            </ul>
+                        </div>                    
+                    </div>
+                    <div class="our-process__step">
+                        <div class="our-process__step-name our-process__step-name--ready"><h3>Сдача</h3></div>
+                        <div class="our-process__step-descript">
+                            <ul>
+                                <li>Мир спасен!</li>
+                                <li>В доме есть свет!</li>
+                            </ul>
+                        </div>                    
+                    </div>
+                </div>  
+                <div class="order-btn__wrapper">
+                    <div class="order-btn order-btn--opening">Заказать</div>  
+                </div> 
+            </div>
+        </section>
+        
+        <section class="feedback">
+            <h2>Отзывы довольных клиентов</h2>
+            <div class="feedback-wrapper owl-carousel">
+                <div class="feedback__item">
+                    <div class="client__pic client__pic--1"><p class="client__name">Василий</p></div>
+                    <div class="feedback__item-text">
+                        <h3>Щит ВРУ</h3>
+                        <p>Все необходимое обородувание было в наличии, цены по сранению с другими предложениями оказались самыми низкими. Оперативно все согласовали, работы по установке были выполены в оговоренный срок без задержек.</p>
+                    </div> 
+                </div>
+
+                <div class="feedback__item">
+                    <div class="client__pic client__pic--2"><p class="client__name">Александр</p></div>
+                    <div class="feedback__item-text">
+                        <h3>Щит ВРУ</h3>
+                        <p>Все необходимое обородувание было в наличии, цены по сранению с другими предложениями оказались самыми низкими. Оперативно все согласовали, работы по установке были выполены в оговоренный срок без задержек.</p>
+                    </div> 
+                </div>
+                <div class="feedback__item">
+                    <div class="client__pic client__pic--3"><p class="client__name">Михаил</p></div>
+                    <div class="feedback__item-text">
+                        <h3>Щит ВРУ</h3>
+                        <p>Все необходимое обородувание было в наличии, цены по сранению с другими предложениями оказались самыми низкими. Оперативно все согласовали, работы по установке были выполены в оговоренный срок без задержек.</p>
+                    </div> 
+                </div>
+                <div class="feedback__item">
+                    <div class="client__pic client__pic--4"><p class="client__name">Полина</p></div>
+                    <div class="feedback__item-text">
+                        <h3>Щит ВРУ</h3>
+                        <p>Все необходимое обородувание было в наличии, цены по сранению с другими предложениями оказались самыми низкими. Оперативно все согласовали, работы по установке были выполены в оговоренный срок без задержек.</p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        
+     
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/scripts.js"></script>    
+    <script>        
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                navText : ["",""],
+                center: true,
+                smartSpeed: 700,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    768:{
+                        items:3
+                    }
+                }
+            })
+        });   
+    </script>  
+           
+    </body>
+</html>
